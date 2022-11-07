@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="122dp"
+        android:layout_height="97dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/image_admin"
+        app:layout_constraintBottom_toTopOf="@+id/sv_Admin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/admin" />
+
+    <ScrollView
+        android:id="@+id/sv_Admin"
+        android:layout_width="292dp"
+        android:layout_height="290dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Welcomedmin"
+        app:layout_constraintVertical_bias="0.613">
+
+        <LinearLayout
+            android:id="@+id/ll_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quizz_zone"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_Add_Quizz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="AddQuiz"
+                android:text="@string/add_quizz" />
+
+            <Button
+                android:id="@+id/btn_del_quizz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="DelQuiz"
+                android:text="@string/delete_quizz" />
+
+            <Button
+                android:id="@+id/btn_update_quizz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="updateQuiz"
+                android:text="@string/update_quizz" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_Zone"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_view_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showTheResult"
+                android:text="@string/view_result" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_Welcomedmin"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/welcomeAdmin"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Clock_Admin"
+        android:layout_width="122dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/AdminClock"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/sv_Admin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Welcomedmin"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <Switch
+        android:id="@+id/btn_logout_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="logout"
+        android:shadowColor="#FF0000"
+        android:text="@string/logout_Admin"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/sv_Admin"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Clock_Admin"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.222" />
+</android.support.constraint.ConstraintLayout>
